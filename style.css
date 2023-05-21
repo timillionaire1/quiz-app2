@@ -1,0 +1,40 @@
+input{
+    cursor:pointer;
+}
+.option{
+    border-radius: 10px;
+    cursor:pointer;
+    background-color:aqua;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-duration: 0.5s;
+    animation-name:rollin;
+
+}
+@keyframes rollin {
+    0%{background-color:aliceblue;
+    opacity: 0;}
+    100%{background-color: aqua;
+    opacity: 1;}
+}
+.option:nth-child(odd){
+    background-color: antiquewhite;
+    animation-name: rollins;
+
+}
+#avatar{
+    /* display: none; */
+    position: relative;
+
+
+}
+
+#img{
+    position: absolute;
+}
+#btn{
+    cursor: pointer;
+}
+.disengage{
+    pointer-events:none
+}

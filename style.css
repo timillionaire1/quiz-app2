@@ -2,6 +2,10 @@ input{
     cursor:pointer;
 }
 .option{
+    display:flex;
+    align-items: center;
+    height:25px ;
+    margin-top:5px;
     border-radius: 10px;
     cursor:pointer;
     background-color:aqua;
@@ -32,8 +36,12 @@ input{
 #img{
     position: absolute;
 }
+.button{
+    margin-top: 10px;
+}
 #btn{
     cursor: pointer;
+    padding:0px 15px;
 }
 .disengage{
     pointer-events:none

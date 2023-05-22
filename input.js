@@ -4,7 +4,7 @@ const quiz = [{q:'what is your favorite', options:['eba','rice', 'beans','yam'],
                     {q:'SpiderMonkey is a javaScript engine for______', options:['chrome','firefox', 'internet explorer','safari'], answer:'firefox'},
                     {q:'User Interface can be termed as _______', options:['backend development','web design', 'web development','frontend development'], answer:'frontend development'},
                     {q:"A book titled 'simplified javascript for vips' was written by _______", options:['elon musk','wole soyinka', 'ebenezer don'], answer:'ebenezer don'},
-                    {q:"what does this apparently symbolize in software development?", img:"assets/images(2)bug.jpg" , options:['software testing','scanning', 'troubleshooting', 'debugging'], answer:'debugging'}]
+                    {q:"what does this apparently symbolize in software development?", img:"../assets/bug.jpg" , options:['software testing','scanning', 'troubleshooting', 'debugging'], answer:'debugging'}]
 
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
@@ -40,7 +40,9 @@ function getNewQuestion(){
     availableQuestions.splice(index1,1);
 
     if(currentQuestion.hasOwnProperty("img")){
-        const img = document.createEle;
+        const img = document.createElement("img");
+        img.src=currentQuestion.img;
+        questionText.appendChild(img);
     }
     const optionLen = currentQuestion.options.length;
 

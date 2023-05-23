@@ -1,10 +1,10 @@
-const quiz = [{q:'what is your favorite', options:['eba','rice', 'beans','yam'], answer:'yam'},
+const quiz = [{q:'Which of these is NOT an association in Google tech space', options:['google developer student club','google developer group', 'google developer tech space'], answer:'google developer tech space'},
                     {q:'who are you', options:['man','woman', 'gay','lesbian'], answer:'man'},
                     {q:'Reactjs is a ______', options:['library','add-on', 'framework','extension'], answer:'library'},
                     {q:'SpiderMonkey is a javaScript engine for______', options:['chrome','firefox', 'internet explorer','safari'], answer:'firefox'},
                     {q:'User Interface can be termed as _______', options:['backend development','web design', 'web development','frontend development'], answer:'frontend development'},
                     {q:"A book titled 'simplified javascript for vips' was written by _______", options:['elon musk','wole soyinka', 'ebenezer don'], answer:'ebenezer don'},
-                    {q:"what does this apparently symbolize in software development?", img:"../assets/bug.jpg" , options:['software testing','scanning', 'troubleshooting', 'debugging'], answer:'debugging'}]
+                    {q:"What does this apparently symbolize in software development?", img:"../assets/bug.jpg" , options:['software testing','scanning', 'troubleshooting', 'debugging'], answer:'debugging'}]
 
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");

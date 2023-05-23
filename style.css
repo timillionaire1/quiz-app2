@@ -1,7 +1,11 @@
+.question-text{
+    /* text-transform:capitalize; */
+}
 input{
     cursor:pointer;
 }
 .option{
+    text-transform:capitalize;
     display:flex;
     align-items: center;
     height:25px ;

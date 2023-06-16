@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" >
+</head>
+<style>
+    .form{
+        background-color: aqua;
+        width: 200px;
+        margin:0 auto;
+        border-radius:10px 0px
+    }
+    input{
+        margin:5px 5px;
+    }
+    #submit{
+        margin-left: 5px;
+        margin-bottom: 5px;
+        cursor:pointer;
+    }
+    .hide{
+        display:none;
+    }
+    .show{
+        display: block;
+    }
+    .board{
+        border: none;
+    }
+    .board2{
+        border:1px solid black;
+        border-radius:5px;
+    }
+</style>
+<body>
+    <form class="form" action="" method="post">
+        {% csrf_token %}
+        <input type="text" id="old-name" placeholder="Your Name" name="text"><br>
+        <input type="email" placeholder="Email Address" name="email"><br>
+        <input type="password" placeholder="password"  name="password"><br>
+        <button type="submit" id="submit" name="form"  onclick="myResult();return false">Submit</button>
+    </form>
+    <div class="count-down hide">
+
+    </div>
+    <div class="input hide">
+        <div class = 'question-number'>
+        </div>
+        <div class = 'question-text'>
+        </div>
+        <div class = 'option-container'>
+        </div>
+    </div>
+    <div class="button hide"><button id="btn" onclick="myNext()">Next</button></div>
+    <form class="form2 hide" action="" method="post">
+        {% csrf_token %}
+        <input type="text" value="" id="demo" style="border:none;" disabled><br>
+        <div class = 'view-score'>
+            <label>Score: </label><input type="text" value="" id="total-score" style="border:none;" disabled><br>
+        </div>
+        <input type="text" class="new-name hide"  id="nick-name" placeholder="Enter Your Nick Name" style="outline:none;" name="nickname" required><br>
+        <button type="submit" class="board" id="check-result" name="form2" disabled></button>
+    </form>
+    <script src="{% static 'input.js' %}"></script>
+    <script src="{% static 'index.js' %}"></script>
+</body>
+</html>

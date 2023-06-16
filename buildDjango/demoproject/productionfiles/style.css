@@ -1,0 +1,55 @@
+.form{
+    height: ;
+    width: 200px;
+    background-color: red;
+    margin: 0 auto;
+}
+input{
+    cursor:pointer;
+}
+.option{
+    text-transform:capitalize;
+    display:flex;
+    align-items: center;
+    height:25px ;
+    margin-top:5px;
+    border-radius: 10px;
+    cursor:pointer;
+    background-color:aqua;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-duration: 0.5s;
+    animation-name:rollin;
+
+}
+@keyframes rollin {
+    0%{background-color:aliceblue;
+    opacity: 0;}
+    100%{background-color: aqua;
+    opacity: 1;}
+}
+.option:nth-child(odd){
+    background-color: antiquewhite;
+    animation-name: rollins;
+
+}
+#avatar{
+    /* display: none; */
+    position: relative;
+
+
+}
+
+#img{
+    position: absolute;
+}
+.button{
+    margin-top: 10px;
+}
+#btn{
+    cursor: pointer;
+    padding:0px 15px;
+}
+.disengage{
+    pointer-events:none
+}

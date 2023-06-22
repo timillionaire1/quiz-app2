@@ -4,7 +4,7 @@ const quiz = [{q:'Which of these is NOT an association in Google tech space', op
                     {q:'SpiderMonkey is a javaScript engine for______', options:['chrome','firefox', 'internet explorer','safari'], answer:'firefox'},
                     {q:'User Interface can be termed as _______', options:['backend development','web design', 'web development','frontend development'], answer:'frontend development'},
                     {q:"A book titled 'simplified javascript for vips' was written by _______", options:['elon musk','wole soyinka', 'ebenezer don'], answer:'ebenezer don'},
-                    {q:"What does this apparently symbolize in software development?", img:"{% static 'bug.jpg' %}" , options:['software testing','scanning', 'troubleshooting', 'debugging'], answer:'debugging'}]
+                    {q:"What does this apparently symbolize in software development?", img: 'bug.jpg' , options:['software testing','scanning', 'troubleshooting', 'debugging'], answer:'debugging'}]
 
 const oldName = document.getElementById("old-name");
 const myForm = document.querySelector(".form");
@@ -48,7 +48,8 @@ function getNewQuestion(){
 
     if(currentQuestion.hasOwnProperty("img")){
         const img = document.createElement("img");
-        img.src=currentQuestion.img;
+        // img.src=currentQuestion.img;
+        img.src="{% static currentQuestion.img %}"
         questionText.appendChild(img);
     }
     const optionLen = currentQuestion.options.length;

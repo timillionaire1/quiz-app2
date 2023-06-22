@@ -27,8 +27,19 @@ def form(request):
             score=request.POST["score"]
             nickname=request.POST["nickname"]
 
+            # if len(nickname) < 4:
+            #     html = "should be more than 4"
+            #     nickname="hi"
+            #     return HttpResponse('rubbish')
+
             new_score=Result(nickname=nickname, score=score)
             new_score.save()
+
+            # if Result.objects.filter(nickname=nickname).exists():
+            #     html = 'try again'
+            # else:
+            #     new_score.save()
+
             # template = loader.get_template('form.html')
             return HttpResponseRedirect("http://127.0.0.1:8000/result2")
         return render(request, 'form.html', {})
@@ -54,7 +65,8 @@ def testing(request):
 
 def testing2(request):
     # mydata = Result.objects.all()
-    mydata = Result.objects.all().order_by('id', '-score').values()
+    # mydata = Result.objects.all().order_by('id', '-score').values()
+    mydata = Result.objects.all().order_by('-score')[0:10]
     template = loader.get_template('result2.html')
     context = {
         'mymembers' : mydata,
